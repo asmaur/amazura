@@ -20,3 +20,6 @@ urlpatterns = [
     path('', include('apps.amazura.urls')),
     path('admin/', admin.site.urls),
 ]
+handler404 = 'apps.amazura.views.error_404_view'
+handler403 = 'apps.amazura.views.error_403_view'
+handler500 = 'apps.amazura.views.error_500_view'

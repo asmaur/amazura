@@ -6,95 +6,41 @@ html, body{
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
     color: #ffb81e;
+    //background-color: #000;
     
 }
-.massa{
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: capitalize;
-}
-
 .navbar{
     background-color: #000;
     z-index: 1;
 }
+.amaz-light{
+    background-color: #ffb81e !important;
+    color: #000 !important;
+}
 
-#headline{
-    //max-height: 100%;
-    //margin-top: 10%;
-}
-#slide{
-    margin-bottom: -5rem; 
-    padding: 0;
-}
-#slide h3{
-    font-size: 1.3rem;
-    width: 70%;
-    margin: 0 auto;
-}
-#slide h2{
-        font-size: 2.5rem;
-        text-align: center;
-    }
 
-#main{
-    min-width: 100%;
-    max-height: 100vh;
-    position: relative;
-    //background-color: red;
-    margin-top: 80px; //75px;
+.coming-timer ul li{
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    width: 100px;
+    font-size: 16px;
+    box-shadow: 3px 2px 3px rgba(0,0,0,0.15);
+}
+.coming-timer ul li span{
+    font-size: 30px;
+}
+.text-white{
+    color: #fff !important;
+}
+.info{
+    font-size: 2rem;
+}
+.info i{
+    color: #128c7e;
     
 }
-
-#clockdiv{
-    padding-top: 4rem;
-    position: relative;
-    font-size: 1.5rem;
-}
-
-.countdown{
-    max-height: 7rem;
-    padding: .3rem;
-    margin: .5rem;
-    display: block;
-    //background-color: aqua;
-    float: none!important;
-    margin-left: auto!important;
-    margin-right: auto!important;
-}
-.countdown p{
-    margin-top: -.5rem;
-}
-
-#days{
-    background-color: rgba(150,150,150,.6);
-    max-height: 8rem;
-    max-width: 8rem;
-    border-radius: 50%;
-    padding-top: 1rem;
-    
-}
-#hours{
-    background-color: rgba(150,150,150,.6);
-    max-height: 8rem;
-    max-width: 8rem;
-    border-radius: 50%;
-    padding-top: 1rem;
-}
-#minutes{
-    background-color: rgba(150,150,150,.6);
-    max-height: 7rem;
-    max-width: 7rem;
-    border-radius: 50%;
-    padding-top: 1rem;
-}
-#seconds{
-    background-color: rgba(150,150,150,.6);
-    max-height: 8rem;
-    max-width: 8rem;
-    border-radius: 50%;
-    padding-top: 1rem;
-}
-
 
 #video-background {
 /*  making the video fullscreen  */
@@ -106,72 +52,47 @@ html, body{
   width: auto; 
   height: auto;
   z-index: -100;
-}
-
-
-.padding{
-     margin: 1rem auto;
-}
-
-#breve{
-    font-size: 1.5rem;
+  display: block;
 }
 
 /*---Media Queries --*/
 
 @media only screen and (min-width: 320px) { 
 
-    body{
-        //color: blue;
-        //-webkit-background-image: url(assets/img/capa.png) no-repeat center center fixed;
-      //-webkit-background-size: cover;
-      //-moz-background-size: cover;
-      //-o-background-size: cover;
-     // background-size: cover;
+    .coming-timer ul li {
+        font-size: 12px;
+        height: 50px;
+        line-height: 50px;
+        width: 50px;
     }
-    #main{
-        //background-color: aqua;
-        margin-top: 25%;
+    .coming-timer ul li span{
+        font-size: 20px;
     }
-    #breve p{
-        margin-top: .5rem;
+    .info{
+        font-size: 1rem;
+    }
+    .headline h3{
+        font-size: 1rem;
+    }
+    .headline h2{
         font-size: 1.5rem;
     }
-} 
+    
+}
 
 @media only screen and (min-width: 375px) { 
     body{
-        //color: yellow;
-    }
-    #main{
-        margin-top: 40%;
+
     }
 }
 
-@media only screen and (min-width: 576px) {
+
+@media only screen and (min-width: 500px) { 
     body{
         //color: green;
     }
-    #main{
-        margin-top: 13%;
-        //margin-bottom: -2rem;
-    }
-    #breve{
-        //margin-top: .2rem;
-        font-size: 1.3rem;
-        padding: 0;
-    }
-}
-
-@media only screen and (min-width: 600px){
-    #main{
-        margin-top:30%;
-    }
-}
-
-@media only screen and (min-width: 600px){
-    #main{
-        margin-top:30%;
+    .headline{
+        margin-top: 4rem;
     }
 }
 
@@ -179,38 +100,35 @@ html, body{
     body{
         //color: indigo;
     }
-    #main{
-        margin-top: 15%;
+    
+    .coming-timer ul li {
+        font-size: 12px;
+        height: 100px;
+        line-height: 100px;
+        width: 100px;
     }
-    #slide h2{
-        margin-bottom: 3rem;
-        font-size: 3.5rem;
+    .coming-timer ul li span{
+        font-size: 30px;
     }
-    #slide h3{
+    .info{
         font-size: 2rem;
     }
-    #breve{
-        margin-top: 3rem;
+    .headline h3{
         font-size: 3rem;
     }
+    .headline h2{
+        font-size: 4rem;
+    }
+    
     
 }
 
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) { 
     body{
-       // color: red;
+        //color: red;
     }
-    #main{
-        margin-top: 20%;
-    }
-    #slide h2{
-        font-size: 5rem;
-    }
-    #slide h3{
-        font-size: 3rem;
-    }
-} 
-*/
+}
+
+
 
 
