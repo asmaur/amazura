@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request, "amazura/index.html")
+    return render(request, "amazura/coming.html")
 
 def error_404_view(request, exception):
     return render(request,'amazura/error.html', {}, status=404)

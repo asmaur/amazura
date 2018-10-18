@@ -22,4 +22,4 @@ urlpatterns = [
 ]
 handler404 = 'apps.amazura.views.error_404_view'
 handler403 = 'apps.amazura.views.error_403_view'
-handler500 = 'apps.amazura.views.error_500_view'
+#handler500 = 'apps.amazura.views.error_500_view'
