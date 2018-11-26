@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +11,8 @@
     
     <!--css-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/coming.css">
+    <link rel="stylesheet" href="{% static "vendor/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/coming.css" %}">
 </head>
 <body>
    
@@ -18,8 +20,8 @@
    <!--navbar item -->
     <nav class="navbar navbar-light fixed-top" >
         <div class="container" >
-            <a href="#" class="navbar-brand">
-                <img src="img/logo4.png" alt="">
+            <a href="/inicio" class="navbar-brand">
+                <img src="{% static "img/logo4.png" %}" alt="">
             </a>
             
         </div>
@@ -34,7 +36,7 @@
                    <h2> ALGO DEU ERRADO...</h2>
                    <h5>VOLTE AO INICIO E TENTE NOVAMENTE</h5>
                    
-                   <a href="/" class="btn btn-warning btn-lg">Volte ao início</a>
+                   <a href="/inicio" class="btn btn-warning btn-lg">Volte ao início</a>
                </div>
            
             </div>
@@ -45,8 +47,8 @@
     <!--video -->
 
             <div class="video-wrap">
-                <video poster='img/explore-poster.jpg' preload muted autoplay loop id="video-background">
-                <source src='videos/vid2.mp4' type='video/mp4' />
+                <video poster='/media/videos/explore-poster.jpg' preload muted autoplay loop id="video-background">
+                <source src='/media/videos/vid2.mp4' type='video/mp4' />
                 <!-- <source src='videos/explore.webm' type='video/webm' /> -->
                 </video>
                 <div class="video-overlay"></div>
@@ -57,10 +59,10 @@
     
     
     <!-- JS -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/countdown.min.js"></script>
-    <script src="vendor/js/bootstrap.min.js"></script>
+   <script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"></script>
+    <script src="{% static "vendor/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/countdown.min.js" %}"></script>
     
     
     
