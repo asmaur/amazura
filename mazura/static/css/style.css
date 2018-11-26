@@ -1,99 +1,261 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
-html, body{
+html,
+body {
     height: 100%;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    color: #ffb81e;
-    
-}
-.massa{
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: capitalize;
-    font-size: 5rem
-}
-#massa-prime{
-    font-family: 'Yellowtail', sans-serif;
-}
-.navbar{
-    background-color: transparent;
-    z-index: 1;
-}
-#slide{
-    width: 100%;
-    margin-top: 3%;
-    
-}
-.carousel-inner img{
-    width: 100%;
-    height: 100%;
-}
-.carousel-caption{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    //color: #ffb81e; rgba(255, 184, 30, 1)
+
 }
 
-#main .layers{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: rgba(0,0,0,.9);
+/* navbar */
+.navbar {
+    padding: 1.5rem;
+    //background-color: transparent!important;
+    z-index: 1000;
+    border-bottom: solid rgba(255, 184, 30, 1) 1px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
 }
-#main{
-    height: 100%;
-    //width: 100%;
-    background-image: url(../img/capa.png);
-    background-position: center;
+
+.menu-top {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+.menu-change .nav-link {
+    color: #fff !important;
+}
+
+.menu-change .nav-link:hover {
+    color: rgba(255, 184, 30, 1) !important;
+}
+
+.menu-change .nav-link:active {
+    color: rgba(255, 184, 30, 1) !important;
+}
+
+.menu-change .active {
+    color: rgba(255, 184, 30, 1) !important;
+}
+
+.menu-change {
+    background-color: #211e1d;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.my-toggler.navbar-toggler {
+    border-color: rgba(255, 184, 30, 1);
+}
+
+.my-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,184,30, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar .nav-link {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.navbar .nav-link:hover {
+    color: rgba(255, 184, 30, 1);
+}
+
+.navbar .active {
+    color: rgba(255, 184, 30, 1);
+}
+
+#agenda a {
+    color: #000;
+    background-color: rgba(255, 184, 30, 1);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* end navbar */
+
+/* main page */
+
+#main {
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    //background-color: darkblue;
+}
+
+#main {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("{% static 'img/capa_bella.png' %}");
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/capa_bella.png);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/capa_bella.png);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/capa_bella.png);
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
-#clockdiv{
-    padding-top: 4rem;
+#main h1 {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+}
+
+#layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+}
+
+#seta {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: .3rem;
+    vertical-align: middle;
+}
+
+#seta a {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: block;
+    margin: 0px auto;
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+/* end main page */
+
+
+/*  terapeutas page */
+
+#teura {
+    min-height: 100%;
+    //background-color: olivedrab;
+    padding-bottom: 2rem;
+}
+
+#teura h1 {
+    margin-top: 3rem;
+    color: #211e1d;
+}
+
+/* end terapeutas page */
+
+/* horario */
+
+#horario {
+    min-height: 40%;
+    color: #fff;
+    font-size: 1.5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+#horario a {
+    font-size: 1.5rem;
+}
+
+#horario h5 {
+    text-align: center;
+}
+
+/* end horario */
+
+/* footer */
+
+#footer {
+    min-height: 50%;
+    margin-bottom: -1rem;
+}
+
+#footer h2 {
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+#footer p,
+li {
+    font-size: 1.3rem;
+    text-align: justify;
+    padding: .2rem;
+}
+
+#footer li {
+    margin-left: 1rem;
+}
+
+#copy {
+    min-height: 10%;
+    width: 100%;
     position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: rgba(255, 184, 30, 1);
+    font-size: 1.1rem;
+    background-color: #211e1d;
+
 }
 
-#video-background {
-/*  making the video fullscreen  */
-  position: fixed;
-  right: 0; 
-  bottom: -50px;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -100;
+/* end footer */
+
+/* scroll control */
+.topcontrol {
+    background: rgba(255, 184, 30, 1) none repeat scroll 0 0;
+    border-radius: 30px;
+    bottom: 5px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    opacity: 1;
+    position: fixed;
+    right: 5px;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    width: 50px;
 }
 
-
-.padding{
-     margin: 1rem auto;
+.topcontrol:hover {
+    background: #222;
+    color: #fff;
 }
+
+/* End scroll control */
+
 
 /*---Media Queries --*/
 
-@media only screen and (max-width: 320px) {
-    
-}
-@media only screen and (max-width: 375px) {
-    
-}
-@media only screen and (max-width: 425px) {
-    
-}
-@media only screen and (max-width: 768px) {
-    
-}
-@media only screen and (max-width: 1024px) {
-    
-}
+@media only screen and (max-width: 320px) {}
 
-@media only screen and (max-width: 1440px) {
-    
-}
+@media only screen and (max-width: 375px) {}
 
+@media only screen and (max-width: 425px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 1440px) {}

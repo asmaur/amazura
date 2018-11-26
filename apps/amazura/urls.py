@@ -5,6 +5,8 @@ from .views import *
 
 
 urlpatterns = [
-    re_path(r'^$',index),
+    re_path(r'^$',init),
+    re_path(r'^inicio',index),
+    re_path(r'^contato$',contato),
 
 ]

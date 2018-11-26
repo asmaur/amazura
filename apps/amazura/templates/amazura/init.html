@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>amazura massagem | Tudo para seu bem estar.</title>
+
+   <!--css-->
+    <link rel="stylesheet" href="{% static "vendor/css/bootstrap.min.css" %}">
+
+
+</head>
+
+<body>
+
+    <style>
+        p{
+        font-size: 1rem;
+        text-align: justify;
+    }
+    strong{
+        color: red;
+    }
+
+    </style>
+    <form action="/" method="post">
+        {% csrf_token %}
+
+        <input type="hidden" value="true" name="allowed">
+
+    <div class="modal" tabindex="-1" role="dialog" id="init">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aviso legal</h5>
+
+                </div>
+                <div class="modal-body">
+                    <p>Este site apresenta conteúdo voltado exclusivamente para o público adulto. Ao acessar você esta confirmando que tem <strong>18 anos ou mais</strong>.</p>
+
+                    <p>A amazura não é responsável por ações cometidas dentro ou fora da nossa página, qualquer ocorrência fica por compleata responsabilidade do individuo ou grupo de individuo, dos pais e/ou tutores legais.</p>
+
+                    <p>Todas as fotografias são protegidas pela lei de direitos autorais. Não oferecemos serviços de natureza sexuais ou implícitos. Favor não insistir.</p>
+
+                    <p class="text-center"> <strong>Eu li e Concordo com os termos estabelecidos</strong> </p>
+
+                    <div class="alert alert-danger text-center" role="alert" style="font-size: 1.2rem;">
+                        Você não pode visualizar o conteúdo do site.
+                    </div>
+                    <div class="alert alert-warning text-center" role="alert" style="font-size: 1.3rem;">
+                        {{msg}}
+                    </div>
+                    <div class="alert alert-info text-center" role="alert" style="font-size: 1.3rem;">
+                        Você é maior de idade?
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger mr-auto" id="sair">Não</button>
+                    <button type="submit" class="btn btn-warning" id="enter">Sou maior de idade</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+ <!-- JS -->
+    <script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"></script>
+    <script src="{% static "vendor/js/bootstrap.min.js" %}"></script>
+
+
+    <script>
+        $('#init').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $(".alert-danger").hide();
+
+
+        $("#sair").click(function() {
+
+            $(".alert-danger").fadeIn()
+        });
+    </script>
+
+
+
+
+</body>
+    </html>
