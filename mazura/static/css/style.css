@@ -3,8 +3,8 @@
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     font-family: 'Josefin Sans', sans-serif;
     //color: #ffb81e; rgba(255, 184, 30, 1)
 
