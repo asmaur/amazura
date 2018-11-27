@@ -1,0 +1,22 @@
+#mapa{
+    min-height: 90%;
+    background-color: rgba(0,0,0,.8);
+    //margin-top: 6.7rem;
+}
+#mapa h1{
+    margin-top: 8rem;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+#trabalhe{
+    min-height: 40%;
+}
+#trabalhe p{
+    font-size: 1.3rem;
+}
+#trabalhe .card-title{
+    padding: .3rem;
+    font-size: 2rem;
+}
