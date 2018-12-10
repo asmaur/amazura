@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ffb81e;
+    //background-color: #000;
+
+}
+
+.navbar {
+    background-color: #000;
+    z-index: 1;
+}
+
+.amaz-light {
+    background-color: #ffb81e !important;
+    color: #000 !important;
+}
+
+
+.coming-timer ul li {
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    width: 100px;
+    font-size: 16px;
+    box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.coming-timer ul li span {
+    font-size: 30px;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.info {
+    font-size: 2rem;
+}
+
+.info i {
+    color: #128c7e;
+
+}
+
+#video-background {
+    /*  making the video fullscreen  */
+    position: fixed;
+    right: 0;
+    bottom: -50px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+/*---Media Queries --*/
+
+@media only screen and (min-width: 320px) {
+
+    .coming-timer ul li {
+        font-size: 12px;
+        height: 50px;
+        line-height: 50px;
+        width: 50px;
+    }
+
+    .coming-timer ul li span {
+        font-size: 20px;
+    }
+
+    .info {
+        font-size: 1rem;
+    }
+
+    .headline h3 {
+        font-size: 1rem;
+    }
+
+    .headline h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 375px) {
+    body {
+        //color: yellow;
+    }
+}
+
+
+@media only screen and (min-width: 500px) {
+    body {
+        //color: green;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        //color: indigo;
+    }
+
+    .coming-timer ul li {
+        font-size: 12px;
+        height: 100px;
+        line-height: 100px;
+        width: 100px;
+    }
+
+    .coming-timer ul li span {
+        font-size: 30px;
+    }
+
+    .info {
+        font-size: 2rem;
+    }
+
+    .headline h3 {
+        font-size: 3rem;
+    }
+
+    .headline h2 {
+        font-size: 4rem;
+    }
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        //color: red;
+    }
+}

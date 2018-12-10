@@ -1,0 +1,84 @@
+{% extends "amazura/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <!-- main page -->
+
+    <div id="main" class="d-flex align-items-center justify-content-center">
+        <div id="layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div id="headline" class="text-center">
+                        <h1>A Qualidade Começa na Sua Escolha ...</h1>
+                        <a href="https://api.whatsapp.com/send?phone=5551993790509&text=Ol%C3%A1%2C%20Eu%20quero%20agendar%20uma%20sess%C3%A3o." class="btn btn-lg btn-outline-warning" target="_blank">Agende sua sessão</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seta" class="text-center">
+            <a href="#teura" class="page-scroll"><i class="fas fa-angle-down"></i></a>
+        </div>
+    </div>
+
+    <!-- end main page -->
+
+    <!--  terapeutas page -->
+    <div id="teura" style="padding-bottom: 1rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 offset-3 text-center">
+                    <h1>Nossas Terapeutas</h1>
+                    <p>As Melhores Profissionais para sua satisfação.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                {% if teras %}
+                    {% for tera in teras %}
+
+                <div class=" design col-md-4 col-sm-6 col-lg-3 mb30  pt-2">
+
+                    <div class="work-card">
+                        <img src="/media/{{tera.capa}}" alt="" class="img-fluid">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <div>
+                                    <h4>{{tera.first_name}} {{tera.last_name}}</h4>
+                                    <em>Idade: {{tera.idade}} anos</em> <br>
+                                    <em>Altura: {{tera.altura}} m</em> <br>
+                                    <em>Peso: {{tera.peso}} kg</em>
+
+                                </div>
+                                <a class="" href="/photos/{{tera.slug}}/{{tera.id}}" ><i class="ti-link"></i></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+
+                {% endif %}
+
+
+                <!--end col-->
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- end terapeutas page -->
+
+{% endblock %}

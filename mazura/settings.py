@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'kk4gh_1*!+s94ol)mit62!t3*9zj%2u9dlm*-22f)uskwr^hy='
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'kk4gh_1*!+s94ol)mit62!t3*9zj%2u9dlm*-22f)uskwr^hy=')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"] # ["localhost", "www.amazuramassagem.com"]
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'mazura.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'amazuradb.sqlite3'),
     }
 }
 
@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -121,10 +121,12 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_URL = '/assets/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/assets/')
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'mazura', 'assets'),
+    os.path.join(BASE_DIR, 'mazura', 'static'),
 )
 SITE_ID = 1

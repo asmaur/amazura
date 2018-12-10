@@ -1,0 +1,206 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>amazura massagem | Tudo para seu bem estar.</title>
+
+    <meta name="description" content="amazura massagem é uma nova clínica localizada na zona nobre de Porto Alegre. Especialidades: Massagem Tantrica, Massagem Nuru, Massagem 4 Hands, Massagem Tailandesas e Relaxantes, Para Casal.">
+
+    <meta name="author" content="Maurice AINON | am.amauri@outlook.com">
+
+    <!--css-->
+    <link rel="stylesheet" href="{% static "vendor/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/hero.css" %}">
+    <link rel="stylesheet" href="{% static "css/themify-icons.css" %}">
+    <link rel="stylesheet" href="{% static "strip/css/strip.css" %}">
+    <link rel="stylesheet" href="{% static "css/loader.css" %}">
+    <link rel="stylesheet" href="{% static "css/contato.css" %}">
+    <link rel="stylesheet" href="{% static "css/page.css" %}">
+    <link rel="stylesheet" href="{% static "css/preco.css" %}">
+
+
+
+</head>
+
+<body>
+
+   <!-- LOADER TEMPLATE
+        <div id="page-loader">
+          <div class="loader-icon fa fa-spin colored-border"></div>
+        </div>
+     /LOADER TEMPLATE -->
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top menu-top">
+        <a class="navbar-brand " href="/inicio">
+            <img class="navbar-image" src="{% static "img/logo4.png" %}">
+        </a>
+        <button class="my-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="p-2 nav-item">
+                    <a class="nav-link" href="/inicio">Início <span class="sr-only">(current)</span></a>
+                </li>
+                 <li class="nav-item dropdown p-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Massagistas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% if teras %}
+                            {% for tera in teras %}
+                      <a class="dropdown-item" href="/photos/{{tera.slug}}/{{tera.id}}">{{tera.first_name}} {{tera.last_name}}</a>
+                      <div class="dropdown-divider"></div>
+                            {% endfor %}
+                        {% else %}
+                      <a class="dropdown-item" href="#">Sem Terapeutas</a>
+                      <div class="dropdown-divider"></div>
+                     {% endif %}
+                    </div>
+                 </li>
+                <li class="p-2 nav-item">
+                    <a class="nav-link" href="/valores">Valores</a>
+                </li>
+                <li class="p-2 nav-item">
+                    <a class="nav-link" href="/contato">Contato</a>
+                </li>
+                <li class="p-2 nav-item" id="agenda">
+                    <a class="btn btn-outline-warning d-none d-md-none d-md-block" href="https://api.whatsapp.com/send?phone=5551993790509&text=Ol%C3%A1%2C%20Eu%20quero%20agendar%20uma%20sess%C3%A3o." target="_blank">Agende sua sessão</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- end navbar -->
+
+
+{% block content %}
+
+
+
+{% endblock %}
+
+
+<!-- horarios -->
+    <div id="horario" class="d-flex align-items-center justify-content-center parallax-window" data-parallax="scroll" data-image-src="{% static "img/capa2.png" %}">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 offset-md-3">
+                    <div class="card padding border-0" style="background-color: transparent;">
+                        <div class="card-body">
+                            <h5 class="card-title">HORÁRIO DE ATENDIMENTO</h5>
+                            <p class="card-text">Segunda-Sexta: 10h-20h <br> Sabádo-Feriados: 10h-18h</p>
+
+                            <a href="https://api.whatsapp.com/send?phone=5551993790509&text=Ol%C3%A1%2C%20Eu%20quero%20agendar%20uma%20sess%C3%A3o." class="btn btn btn-outline-warning  btn-block" target="_blank">Agende sua sessão</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end horarios -->
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 p-2">
+                    <h2>Sobre</h2>
+                    <p>amazura é um espaço de relaxamento e bem estar. Contamos com uma equipe de terapeutas preparadas para tornar o seu dia incrível. Confere nossos serviços e agende uma sessão.</p>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-4 p-2">
+                    <h2 style="margin-left: 2rem;">Serviços</h2>
+                    <ul>
+                        <li>Nuru</li>
+                        <li>Casal</li>
+                        <li>Tailandesa</li>
+                        <li>Quatro mãos</li>
+                        <li>Massagem tântrica</li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-4 p-2">
+                    <h2>Regulamento</h2>
+                    <p> Nossos serviços são terapéuticas e não de natureza sexual. Não oferecemos nenhum serviço a carater sexual no nosso estabelecimento. Nossas terapéutas são proficionais autônomas e conduzem as sessões com seriedades. Favor não insistir.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+
+    <!-- end footer -->
+
+    <!-- copyright -->
+    <div id="copy" class="">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center d-flex justify-content-center align-middle" style="margin-top: 2.5%;">
+                    <p>AMAZURA MASSSAGEM &copy; 2018 | Todos os direitos reservados.
+                        <br>
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- End copyright -->
+
+    <!-- scroll control -->
+    <div id="topcontrol" class="topcontrol" title=""><i class="fa fa-arrow-up scrolltop"></i></div>
+
+    <!-- End scroll control -->
+
+
+    <!-- JS -->
+    <script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"></script>
+    <script src="{% static "vendor/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+    <script src="{% static "js/scrolltopcontrol.js" %}"></script>
+    <script src="{% static "strip/js/strip.pkgd.min.js" %}"></script>
+    <script src="{% static "js/parallax.min.js" %}"></script>
+    <script src="{% static "js/loader.js" %}"></script>
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129902354-1"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', 'UA-129902354-1');
+</script>
+
+ <script>
+    $(document).ready(function(){
+        $('.strip').attr('oncontextmenu','return false;');
+        $('.strp-pages').attr('oncontextmenu','return false;');
+    });
+
+    </script>
+
+
+</body>
+
+</html>

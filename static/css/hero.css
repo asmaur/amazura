@@ -1,0 +1,124 @@
+/**work overlay style**/
+.work-card {
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+}
+
+.work-card:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    content: "";
+    //z-index: 1;
+    opacity: 1;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    opacity: 0;
+}
+
+.work-card .work-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    -o-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    -ms-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+.work-card .overlay-content {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin-bottom: 30px;
+    z-index: 3;
+    -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    -o-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    -ms-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+.work-card .overlay-content > div {
+    padding-bottom: 10px;
+}
+
+.work-card .overlay-content h4 {
+    text-transform: capitalize;
+    margin-bottom: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.work-card .overlay-content em {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.work-card .overlay-content a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    background: rgba(255, 184, 30, 1);
+    color: #fff;
+    text-decoration: none;
+}
+
+.work-card .overlay-content a > i {
+    display: block;
+    line-height: 32px;
+}
+
+.work-card .overlay-content a:hover {
+    background: rgba(255, 184, 30, 1);
+}
+
+.work-card:hover:before {
+    opacity: 1;
+}
+
+.work-card:hover .work-overlay {
+    opacity: 1;
+}
+
+.work-card:hover .overlay-content {
+    margin-bottom: 0;
+}
+
+.project-details {
+    background: #fbfbfb;
+    padding: 20px 15px;
+}
+
+.project-details p {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.project-details p span {
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 8px;
+}
+a.gallery{
+    display: none!important;
+}
