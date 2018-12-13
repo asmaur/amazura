@@ -1,0 +1,108 @@
+{% extends "amazura/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+    <!-- mapa -->
+
+    <div id="persona">
+        <div class="container" style="color: #fff;">
+            <div class="row">
+                <div class="col-8 offset-2 text-center">
+                    <h1>Carol Muniz</h1>
+                    
+                   <!-- <p> <em>Idade: 20 anos</em> <br>
+                    <em>Altura: 1,54 m</em> <br>
+                    <em>Peso: 53 kg</em> </p> -->
+                    <a class="btn btn-block btn-outline-warning" href="" data-toggle="modal" data-target="#massagist-detalhe" style="margin-bottom: 1rem">+ Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <section class="gallery-block grid-gallery" style="background-color: #fff;">
+            <div class="container">
+                <div class="heading">
+                    <h2>Minha Galeria</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="strip" href="{% static "imagen/carol-muniz/carol_site_1.png" %}" data-lightbox="portfolio" data-title="Carol Muniz" title="View" data-strip-caption="Carol Muniz" data-strip-group="ivy_salazar">
+                            <img class="img-fluid image scale-on-hover" src="{% static "imagen/carol-muniz/carol_site_1.png" %}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="strip" href="{% static "imagen/carol-muniz/carol_site_2.png" %}" data-lightbox="portfolio" data-title="Carol Muniz" title="View" data-strip-caption="Carol Muniz" data-strip-group="ivy_salazar">
+                            <img class="img-fluid image scale-on-hover" src="{% static "imagen/carol-muniz/carol_site_2.png" %}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="strip" href="{% static "imagen/carol-muniz/carol_site_3.png" %}" data-lightbox="portfolio" data-title="Carol Muniz" title="View" data-strip-caption="Carol Muniz" data-strip-group="ivy_salazar">
+                            <img class="img-fluid image scale-on-hover" src="{% static "imagen/carol-muniz/carol_site_3.png" %}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="strip" href="{% static "imagen/carol-muniz/carol_site_4.png" %}" data-lightbox="portfolio" data-title="Carol Muniz" title="View" data-strip-caption="Carol Muniz" data-strip-group="ivy_salazar">
+                            <img class="img-fluid image scale-on-hover" src="{% static "imagen/carol-muniz/carol_site_4.png" %}">
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        
+        
+    </div>
+    
+    
+    <!-- detalhe terapeutas-->
+                <div class="modal fade" id="massagist-detalhe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="">Carol Muniz</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <strong>• Idade:</strong> 20 anos <br>
+                                <strong>• Altura:</strong> 1,60 m <br>
+                               <!-- <strong>• Peso:</strong> 54 Kg <br> -->
+
+
+                                <br>
+                                <strong>Especialidades: </strong> <br>
+
+                                <p>
+                                    • <strong> Massagem tântrica </strong> <br>
+                                    • <strong> Massagem Nuru </strong> <br>
+                                    • <strong> Massagem Tailandesa </strong> <br>
+                                    • <strong> Massagem Relaxante </strong> <br>
+                                </p>
+
+                                <strong>Descrição: </strong> <br>
+                                <p style="text-align: justify;" >
+                                    Carol Muniz, 20 aninhos, com 1,60 m de altura, cabelos bem longos, toda natural estilo mignon.<hr> Meu atendimento é estilo namoradinha, mas sem frescura. Estou pronta para dar prazer. Vamos nos divertir muito juntos.
+
+                                </p>
+
+                            </div>
+                            <div class="modal-footer" style="background-color: #000;">
+                                <button type="button" class="btn btn-lg btn-outline-danger mr-auto" data-dismiss="modal">Close</button>
+                                <a href="https://api.whatsapp.com/send?phone=5551993790509&text=Ol%C3%A1%20Carol%20Muniz%2C%20Encontrei%20voc%C3%AA%20no%20site%20da%20amazura%20massagem%2C%20quero%20agendar%20uma%20sess%C3%A3o%20com%20voc%C3%AA." class="btn btn-lg btn-outline-warning" target="_blank">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end detalhe Alice_Bueno-->
+    
+    
+
+    <!-- end mapa -->
+
+
+
+{% endblock %}

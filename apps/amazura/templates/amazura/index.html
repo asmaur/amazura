@@ -25,7 +25,7 @@
     <!-- end main page -->
 
     <!--  terapeutas page -->
-    <div id="teura" style="padding-bottom: 1rem;">
+    <div id="teura" style="padding-bottom: 5rem;">
         <div class="container">
             <div class="row">
                 <div class="col-6 offset-3 text-center">
@@ -39,23 +39,22 @@
 
             <div class="row">
 
-                {% if teras %}
-                    {% for tera in teras %}
 
+                <!-- col -->
                 <div class=" design col-md-4 col-sm-6 col-lg-3 mb30  pt-2">
 
                     <div class="work-card">
-                        <img src="/media/{{tera.capa}}" alt="" class="img-fluid">
+                        <img src="{% static "imagen/ivy-salazar/ivy_capa.png" %}" alt="" class="img-fluid">
                         <div class="work-overlay">
                             <div class="overlay-content">
                                 <div>
-                                    <h4>{{tera.first_name}} {{tera.last_name}}</h4>
-                                    <em>Idade: {{tera.idade}} anos</em> <br>
-                                    <em>Altura: {{tera.altura}} m</em> <br>
-                                    <em>Peso: {{tera.peso}} kg</em>
+                                    <h4>Ivy Salazar</h4>
+                                    <em>Idade: 19 anos</em> <br>
+                                    <em>Altura: 1,64 m</em> <br>
+                                    <!--<em>Peso: {{tera.peso}} kg</em> -->
 
                                 </div>
-                                <a class="" href="/photos/{{tera.slug}}/{{tera.id}}" ><i class="ti-link"></i></a>
+                                <a class="" href="/photos/ivy-salazar" ><i class="ti-link"></i></a>
 
 
                             </div>
@@ -63,11 +62,78 @@
                     </div>
 
                 </div>
-                {% endfor %}
+                <!--end col-->
 
-                {% endif %}
+                <!-- col -->
+                <div class=" design col-md-4 col-sm-6 col-lg-3 mb30  pt-2">
+
+                    <div class="work-card">
+                        <img src="{% static "imagen/carol-muniz/carol_capa.png" %}" alt="" class="img-fluid">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <div>
+                                    <h4>Carol Muniz</h4>
+                                    <em>Idade: 20 anos</em> <br>
+                                    <em>Altura: 1,60 m</em> <br>
+                                    <!--<em>Peso: {{tera.peso}} kg</em> -->
+
+                                </div>
+                                <a class="" href="/photos/carol-muniz" ><i class="ti-link"></i></a>
 
 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--end col-->
+
+                <!-- col -->
+                <div class=" design col-md-4 col-sm-6 col-lg-3 mb30  pt-2">
+
+                    <div class="work-card">
+                        <img src="{% static "imagen/laura-amorim/laura_capa.png" %}" alt="" class="img-fluid">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <div>
+                                    <h4>Laura Amorim</h4>
+                                    <em>Idade: 22 anos</em> <br>
+                                    <em>Altura: 1,54 m m</em> <br>
+                                    <!--<em>Peso: {{tera.peso}} kg</em> -->
+
+                                </div>
+                                <a class="" href="/photos/laura-amorim" ><i class="ti-link"></i></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--end col-->
+
+                <!-- col -->
+                <div class=" design col-md-4 col-sm-6 col-lg-3 mb30  pt-2">
+
+                    <div class="work-card">
+                        <img src="{% static "imagen/livia-rodriguez/livia_capa.png" %}" alt="" class="img-fluid">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <div>
+                                    <h4>Livia Rodriguez</h4>
+                                    <em>Idade: 24 anos</em> <br>
+                                    <em>Altura: 1,60 m</em> <br>
+                                    <!--<em>Peso: {{tera.peso}} kg</em> -->
+
+                                </div>
+                                <a class="" href="/photos/livia-rodriguez" ><i class="ti-link"></i></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 <!--end col-->
 
 
