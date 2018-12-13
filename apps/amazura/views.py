@@ -23,8 +23,8 @@ def check_cookies(request):
 
 def index(request):
     if check_cookies(request):
-        terapeutas = Terapeuta.objects.all()
-        return render(request, "amazura/index.html", {"teras" : terapeutas})
+        #terapeutas = Terapeuta.objects.all()
+        return render(request, "amazura/index.html",) #{"teras" : terapeutas})
     else:
         return redirect("/")
 
@@ -32,8 +32,8 @@ def index(request):
 def contato(request):
 
     if check_cookies(request):
-        terapeutas = Terapeuta.objects.all()
-        return render(request, "amazura/contato.html", {"teras" : terapeutas})
+        #terapeutas = Terapeuta.objects.all()
+        return render(request, "amazura/contato.html",) #{"teras" : terapeutas})
 
     else:
         return redirect("/")
@@ -73,10 +73,36 @@ def page(request, slug, id):
 
 def valores(request):
     if check_cookies(request):
-        terapeutas = Terapeuta.objects.all()
-        return render(request, "amazura/valores.html", {"teras" : terapeutas})
+        #terapeutas = Terapeuta.objects.all()
+        return render(request, "amazura/valores.html",)# {"teras" : terapeutas})
     else:
         redirect("/")
+
+
+def salazar(request,):
+    if check_cookies(request):
+        return render(request, "amazura/salazar.html",)
+    else:
+        redirect("/")
+
+def muniz(request,):
+    if check_cookies(request):
+        return render(request, "amazura/muniz.html",)
+    else:
+        redirect("/")
+
+def amorim(request,):
+    if check_cookies(request):
+        return render(request, "amazura/amorim.html",)
+    else:
+        redirect("/")
+
+def rodriguez(request,):
+    if check_cookies(request):
+        return render(request, "amazura/rodriguez.html",)
+    else:
+        redirect("/")
+
 
 
 def error_404_view(request, exception):
@@ -87,4 +113,8 @@ def error_403_view(request, exception):
 
 def error_500_view(request, exception):
     return render(request,'amazura/error.html', {}, status=500)
+
+
+
+
 
